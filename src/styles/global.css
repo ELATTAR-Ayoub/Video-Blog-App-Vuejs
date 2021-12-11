@@ -1,0 +1,79 @@
+@import-normalize;
+@tailwind base;
+@tailwind components;
+
+@layer components {
+    *,*::before,*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    /* .App {
+    @apply w-screen min-h-screen capitalize overflow-hidden;
+    } */
+    .flexCenter{
+    @apply flex justify-center items-center;
+    }
+    .containerX {
+        @apply max-w-screen-2xl w-full mx-auto pb-16;
+    }
+    .watermark{
+    @apply text-primary font-bold text-xl transition-all transform md:text-2xl;
+    }
+    .nav-links {
+    @apply w-1/2 ml-auto;
+    }
+    .nav-links ul {
+    @apply w-full flex items-center justify-end list-none text-lg;
+    }
+    .nav-links a {
+    @apply text-primary mx-4 transition-all  border-b border-transparent hover:border-primary  ;
+    }
+    .mobile-nav {
+    @apply absolute h-full w-3/4 p-5 bg-secondary top-0 left-0 flex items-center justify-start flex-col text-xl z-50;
+    }
+    .footer-links a {
+        @apply opacity-30 hover:opacity-100;
+    }
+    .footer-links span {
+        @apply mx-4 text-lg opacity-50;
+    }
+    .mobile-nav a {
+    @apply text-primary my-4 font-semibold transition-all hover:text-sideColor-light;
+    }
+    .main-btn {
+      @apply bg-sideColor text-primary font-semibold transition-all rounded-md p-4 px-24 cursor-pointer hover:bg-sideColor-dark;
+    }
+    .centerObject {
+      @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    }
+    .no-overflow {
+      @apply overflow-hidden overflow-ellipsis whitespace-nowrap;
+    }
+    .no-overflow-2lines{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .blogCards-container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+    padding-top: .5rem;
+    justify-content: center;
+  }
+
+};
+
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  @apply border border-solid border-sideColor border-opacity-10 border-t-0 border-b-0 bg-transparent w-2 ;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-sideColor opacity-50 hover:bg-secondary;
+}
