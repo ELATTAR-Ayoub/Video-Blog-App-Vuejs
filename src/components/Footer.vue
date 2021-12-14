@@ -12,7 +12,7 @@
             <div class="flex justify-between flex-col md:flex-row ">
                 <div>
                     <p class='font-semibold text-xl opacity-75'>&#169; VBlog</p>
-                    <p class='font-semibold text-base opacity-50'>All RIGHT MIGHT BE RESERVED?</p>
+                    <p class='font-semibold text-base opacity-50'>All RIGHT ARE RESERVED</p>
                 </div>
                 <div class="footer-links">
                     <router-link   :to="{ name: 'Home' }">VBlog</router-link>

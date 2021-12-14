@@ -1,37 +1,38 @@
 <template lang="">
-    <div class='w-full'>
-      <Loading v-if="loading"/>
-        <div class='containerX flexCenter mt-24 flex-col mx-auto w-full text-secondary capitalize'>
-            <h1 class=" text-4xl font-semibold mb-1">Login to VBlog</h1>
-            <p>Welcome again! we are happy to see you.</p>
-            <form action="/login" method="POST">
-                <div class="login-section">
-                    <input type="text" autocomplete=""
-                        placeholder=" " required v-model="email">
-                    <label class="login-label">
-                        <span class="login-content">email</span>
-                    </label>
-                </div>
-                <div class="login-section mb-8">
-                    <input  type="password"
-                        placeholder=" " required v-model="password">
-                    <label class="login-label">
-                        <span class="login-content">password</span>
-                    </label>
-                </div>
-                    <p v-show="error" class="log-error">{{this.errorMsg}}</p>
-                <div class="submit-section">
-                    <button @click.prevent="login" class='main-btn' >Log in</button>
-                </div>
-            </form>
-            <router-link class="login-link" :to="{ name: 'ForgotPassword' }">forgot your password? </router-link>
-            <p> don't have an account? try <router-link class="login-link" :to="{ name: 'Register' }">register</router-link>
-            </p>
-            <p> Go back <router-link class="login-link" :to="{ name: 'Home' }">Home</router-link>
-            </p>
+  <div class='w-full'>
+    <Loading v-if="loading" />
+    <div class='containerX flexCenter mt-24 flex-col mx-auto w-full text-secondary capitalize'>
+      <h1 class=" md:text-4xl text-2xl font-semibold mb-1">Login to VBlog</h1>
+      <p class=' paragraph'>Welcome again! we are happy to see you.</p>
+      <form action="/login" method="POST">
+        <div class="login-section">
+          <input type="text" autocomplete="" placeholder=" " required v-model="email">
+          <label class="login-label">
+            <span class="login-content">email</span>
+          </label>
         </div>
-
+        <div class="login-section mb-8">
+          <input type="password" placeholder=" " required v-model="password">
+          <label class="login-label">
+            <span class="login-content">password</span>
+          </label>
+        </div>
+        <p v-show="error" class="log-error">{{this.errorMsg}}</p>
+        <div class="submit-section">
+          <button @click.prevent="login" class='main-btn'>Log in</button>
+        </div>
+      </form>
     </div>
+    <p class="login-link paragraph w-full">
+      <router-link :to="{ name: 'ForgotPassword' }">forgot your password? </router-link>
+    </p>
+    <p class='paragraph'> don't have an account? try <router-link class="login-link" :to="{ name: 'Register' }">register
+      </router-link>
+    </p>
+    <p class='paragraph'> Go back <router-link class="login-link" :to="{ name: 'Home' }">Home</router-link>
+    </p>
+
+  </div>
 </template>
 <script>
 import firebase from "firebase/app";
@@ -136,6 +137,7 @@ form {
 .file input {
   @apply transform hover:scale-110;
 }
+
 #file-img alt {
   display: hidden;
 }

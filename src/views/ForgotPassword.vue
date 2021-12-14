@@ -3,8 +3,8 @@
         <Modale v-if="modalActive" :modalHeader="modalHeader" :modalMessage="modalMessage" v-on:close-modal="closeModal"/>
         <Loading v-if="loading"/>
         <div class='containerX flexCenter mt-24 flex-col mx-auto w-full text-secondary capitalize'>
-            <h1 class=" text-4xl font-semibold mb-1">Reset Password</h1>
-            <p>Don't worry, we got your back!</p>
+            <h1 class=" md:text-4xl text-2xl font-semibold mb-1">Reset Password</h1>
+            <p class='paragraph'>Don't worry, we got your back!</p>
             <form action="" method="POST">
                     <div class="login-section">
                         <input type="email" autocomplete="" required v-model="email">
@@ -18,9 +18,9 @@
                     </button>
                 </div>
             </form>
-            <p> Wanna give it another try? try <router-link class="login-link" :to="{ name: 'Login' }">Login</router-link>
+            <p class='paragraph'> Wanna give it another try? try <router-link class="login-link" :to="{ name: 'Login' }">Login</router-link>
             </p>
-            <p> Go back <router-link class="login-link" :to="{ name: 'Home' }">Home</router-link>
+            <p class='paragraph'> Go back <router-link class="login-link" :to="{ name: 'Home' }">Home</router-link>
             </p>
         </div>
 

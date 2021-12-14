@@ -2,9 +2,9 @@
     <div class="w-full relative">
         <div class="containerX  justify-between flex-col p-5 capitalize">
             <div class='flexCenter justify-between'>
-                <h1 class="text-3xl font-semibold">Your Published Blogs</h1>
+                <h1 class="md:text-3xl text-xl font-semibold">Your Published Blogs</h1>
                 <div class="capitalize">
-                    <label for="editpostcheckbox" class="toggle text-xl">
+                    <label for="editpostcheckbox" class="toggle md:text-xl text-base">
                         <input type="checkbox" v-model="editPost" class="toggle__input" id="editpostcheckbox" />
                         <span class="toggle-track">
                             <span class="toggle-indicator">

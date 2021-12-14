@@ -21,6 +21,7 @@ export default new Vuex.Store({
     blogVideoName: '',
     blogVideoFileURL: null,
     blogVideoPreview: null,
+    deleteWarning: null,
     editPost: null,
     user: null,
     profileEmail: null,
@@ -72,6 +73,9 @@ export default new Vuex.Store({
     openBlogVideoPreview(state) {
       state.blogVideoPreview = !state.blogVideoPreview;
     },
+    openDeleteWarning(state) {
+      state.deleteWarning = !state.deleteWarning;
+    },
     toggleEditPost(state, payload) {
       state.editPost = payload;
     },
@@ -111,7 +115,10 @@ export default new Vuex.Store({
       state.blogPhotoFileURL = payload.blogPhotoFileURL;
       state.blogVideoName = payload.blogVideoName;
       state.blogVideoFileURL = payload.blogVideoFileURL;
-    }
+    },
+    filterBlogPosts(state, payload) {
+      state.blogPosts = state.blogPosts.filter(post => post.blogID !== payload)
+    },
   },
   actions: {
     // we dont make changes inside an action, butif we will we'll make an commit
@@ -188,6 +195,11 @@ export default new Vuex.Store({
       console.log("state.userHistories");
       console.log(state.userHistory);
     },
+    async deletePost({ commit }, payload) {
+      const getPost = await db.collection('blogPosts').doc(payload);
+      await getPost.delete();
+      commit("filterBlogPosts", payload);
+    }
   },
 
 

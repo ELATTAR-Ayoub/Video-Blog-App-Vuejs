@@ -20,6 +20,9 @@
     .watermark{
     @apply text-primary font-bold text-xl transition-all transform md:text-2xl;
     }
+    .paragraph {
+      @apply md:text-base text-sm text-center
+    }
     .nav-links {
     @apply w-1/2 ml-auto;
     }
@@ -42,7 +45,7 @@
     @apply text-primary my-4 font-semibold transition-all hover:text-sideColor-light;
     }
     .main-btn {
-      @apply bg-sideColor text-primary font-semibold transition-all rounded-md p-4 px-24 cursor-pointer hover:bg-sideColor-dark;
+      @apply bg-sideColor text-primary font-semibold transition-all rounded-md p-4 md:px-24 px-16 cursor-pointer hover:bg-sideColor-dark;
     }
     .centerObject {
       @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
@@ -58,6 +61,7 @@
     -webkit-box-orient: vertical;
   }
   .blogCards-container {
+    position: relative;
     display: grid;
     grid-gap: 1rem;
     grid-auto-rows: auto;

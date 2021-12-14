@@ -8,7 +8,9 @@
         <ul v-show="mobile">
           <router-link :to="{ name: 'Home' }">Home</router-link>
           <router-link :to="{ name: 'Blogs' }">Blogs</router-link>
-          <router-link :to="{ name: 'NewBlog' }">Create Blog </router-link>
+          <router-link v-if="user" :to="{ name: 'NewBlog' }"
+            >Create Blog
+          </router-link>
           <router-link
             v-if="!user"
             class="
@@ -54,12 +56,14 @@
 
     <transition name="mobile-nav">
       <ul class="mobile-nav" v-show="mobileNav">
-        <div class="watermark self-start">
+        <div class="watermark self-start" @click="toggleMobileNav">
           <router-link class="" :to="{ name: 'Home' }">VBlog </router-link>
         </div>
         <router-link :to="{ name: 'Home' }">Home</router-link>
         <router-link :to="{ name: 'Blogs' }">Blogs</router-link>
-        <router-link :to="{ name: 'NewBlog' }">Create Blog </router-link>
+        <router-link v-if="user" :to="{ name: 'NewBlog' }"
+          >Create Blog
+        </router-link>
         <router-link
           v-if="!user"
           class="bg-sideColor p-3 w-full text-center hover:bg-sideColor-dark"

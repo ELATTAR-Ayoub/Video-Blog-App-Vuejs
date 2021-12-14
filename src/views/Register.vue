@@ -6,7 +6,7 @@
             <div id="sHalfBar" class="bg-sideColor w-1/2 transform -translate-x-doubleFull h-2 transition-all"></div>
         </div>
         <div class='containerX flexCenter mt-24 flex-col mx-auto w-full text-secondary capitalize'>
-            <h1 class=" text-4xl font-semibold mb-1">Register to VBlog</h1>
+            <h1 class=" md:text-4xl text-2xl font-semibold mb-1">Register to VBlog</h1>
             <p>a new member? Welcome to the family!</p>
             <form>
                 <div id="step1">
@@ -29,10 +29,10 @@
                 </div>
                 <!--  -->
                 <div id="step2" class="hidden">
-                    <div class="file-input justify-center ">
+                    <div class="file-input justify-center mt-5">
                         <p class="font-bold border-secondary">Profle picture</p>
                         <input type="file" @change="filePhotoChange" ref="profilePicture" accept=".png, .jpg, .jpeg"
-                            id="profile-picture" class="file relative">
+                            id="profile-picture" class="file hidden relative">
                         <label class="p-4" for="profile-picture">Upload a Profle picture</label>
                         <p class="file-name w-60 no-overflow">File Chosen: {{this.$store.state.profilePictureName}}</p>
                     </div>
@@ -67,9 +67,9 @@
                 </div>
 
             </form>
-            <p> already have an account? try <router-link class="login-link" :to="{ name: 'Login' }">login</router-link>
+            <p class=' paragraph'> already have an account? try <router-link class="login-link" :to="{ name: 'Login' }">login</router-link>
             </p>
-            <p> Go back <router-link class="login-link" :to="{ name: 'Home' }">Home</router-link>
+            <p class=' paragraph'> Go back <router-link class="login-link" :to="{ name: 'Home' }">Home</router-link>
             </p>
         </div>
 

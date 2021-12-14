@@ -4,8 +4,8 @@
         <blogCoverPreview v-show="this.$store.state.blogPhotoPreview"/>
         <blogVideoPreview v-show="this.$store.state.blogVideoPreview"/>
         <div class="containerX flexCenter justify-between flex-col p-5 capitalize">
-            <h1 class="text-4xl font-semibold mb-1 normal-case">Create a Blog</h1>
-            <p class='text-center'>here you can edit your blog if you purhaps missed something when creating it!</p>
+            <h1 class="md:text-4xl text-2xl font-semibold mb-1 normal-case">Create a Blog</h1>
+            <p class='text-center paragraph'>here you can edit your blog if you purhaps missed something when creating it!</p>
             
             <div class="w-full flexCenter flex-col lg:flex-row mt-12">
                 <div class="login-section mt-1 mb-2 md:mb-1 mr-0 lg:mr-4">
@@ -15,26 +15,26 @@
                     </label>
                 </div>
                 <div class="flex justify-center items-start w-full lg:w-60 flex-col mr-2">
-                    <div class="file-input justify-center ">
+                    <div class="file-input justify-center md:w-60 w-full m-2">
                         <input type="file" @change="filePhotoChange" ref="blogPhoto" accept=".png, .jpg, .jpeg"
                             id="blog-photo" class="file relative">
-                        <label class="p-4 w-60" for="blog-photo">Upload Cover
+                        <label class="p-4 w-full" for="blog-photo">Upload Cover
                             Photo</label>
-                        <p class="file-name w-60 no-overflow">File Chosen: {{this.$store.state.blogPhotoName}}</p>
+                        <p class="file-name w-full no-overflow">File Chosen: {{this.$store.state.blogPhotoName}}</p>
                     </div>
-                    <button @click="openPhotoPreview" class="main-btn px-8 w-60" :class="{'opacity-50': !this.$store.state.blogPhotoFileURL}">Preview
+                    <button @click="openPhotoPreview" class="main-btn px-8 md:w-60 w-full m-2" :class="{'opacity-50': !this.$store.state.blogPhotoFileURL}">Preview
                         Photo</button>
                 </div>
             </div>
             <div :class="{hidden: !error}" class="log-error mt-2 mb-2 font-semibold">
                 <p>Error: {{this.errorMessage}}</p>
             </div>
-            <div class="submit-section mt-5 p-2 flexCenter">
-                <router-link class='flexCenter bg-red-500 hover:bg-red-400 main-btn mr-2 md:w-60 w-56 px-0' :to="{ name: 'Home' }">Cancel
+            <div class="submit-section mt-5 p-2 flexCenter md:flex-row flex-col">
+                <router-link class='flexCenter bg-red-500 hover:bg-red-400 main-btn md:mr-2 mr-0 md:mb-0 mb-3 md:w-60 w-56 px-0' :to="{ name: 'Home' }">Cancel
                     <eva-icon class="ml-2 transform rotate-45" fill='#fff' width='18px' height='18px'  name="plus"></eva-icon>
                 </router-link>
                 <button @click="updateBlog" 
-                    class="flexCenter main-btn mx-auto md:w-60 w-56 px-0 bg-sideColor hover:bg-secondary-dark">Save Changes
+                    class="flexCenter main-btn mx-auto md:w-60 w-full px-0 bg-sideColor hover:bg-secondary-dark">Save Changes
                     <eva-icon class="ml-2" fill='#fff' width='18px' height='18px' name="edit">
                     </eva-icon>
                 </button>
