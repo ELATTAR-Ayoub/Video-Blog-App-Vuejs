@@ -1,24 +1,49 @@
-# fireblogs
+# Vblog
 
-## Project setup
-```
-npm install
-```
+Vblog is a platform that allows users to share their videos and happy moments with the world. All users can view and interact with the shared videos.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+This app is built using Vue3 as the framework, Tailwind as the styling framework, and Firebase as the database and user login/registration system. It was created as a test for my first company, and is live at [Live Demo](https://keen-noyce-2540a3.netlify.app/).
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Features
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- User registration and login system powered by Firebase.
+- Ability to post and view videos from other users.
+- Simple and intuitive interface for easy navigation.
+
+
+## Dependencies
+
+This app depends on the following packages:
+
+- [Vue3](https://vuejs.org/) - a progressive JavaScript framework for building user interfaces
+- [Firebase](https://firebase.google.com/) - a platform for building mobile and web applications that provides a realtime database, authentication services, and hosting.
+- [TailwindCSS](https://tailwindcss.com/) - a utility-first CSS framework.
+
+
+## Installation and Setup
+
+To run this app locally on your machine, follow these steps:
+
+1- Clone this repository to your local machine: git clone https://github.com/[your_username]/vblog.git.
+2- Navigate into the project directory: cd vblog.
+3- Install the required dependencies: npm install.
+4- Run the development server: npm run serve.
+
+The app will now be running at http://localhost:8080.
+
+
+## Live Demo
+
+You can view a live demo of the app at [Live Demo](https://keen-noyce-2540a3.netlify.app/).
+
+
+## Contributing
+
+If you would like to contribute to Music Search, you can do so by creating a fork of this repository and submitting a pull request. Please be sure to follow the existing coding conventions and include tests for any new features or changes.
+If you have any problem with that contact me. The app is still under developing.
+
+
+## License
+
+Music Search is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
