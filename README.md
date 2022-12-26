@@ -1,4 +1,4 @@
-# Vblog
+# Vblog - Video Blog App Vuejs
 
 Vblog is a platform that allows users to share their videos and happy moments with the world. All users can view and interact with the shared videos.
 
