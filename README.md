@@ -25,8 +25,8 @@ This app depends on the following packages:
 
 To run this app locally on your machine, follow these steps:
 
-1- Clone this repository to your local machine: git clone https://github.com/[your_username]/vblog.git.
-2- Navigate into the project directory: cd vblog.
+1- Clone this repository to your local machine: git clone https://github.com/ELATTAR-Ayoub/Video-Blog-App-Vuejs.git.
+2- Navigate into the project directory: cd Video-Blog-App-Vuejs.
 3- Install the required dependencies: npm install.
 4- Run the development server: npm run serve.
 
