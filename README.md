@@ -40,10 +40,10 @@ You can view a live demo of the app at [Live Demo](https://keen-noyce-2540a3.net
 
 ## Contributing
 
-If you would like to contribute to Music Search, you can do so by creating a fork of this repository and submitting a pull request. Please be sure to follow the existing coding conventions and include tests for any new features or changes.
+If you would like to contribute to this App, you can do so by creating a fork of this repository and submitting a pull request. Please be sure to follow the existing coding conventions and include tests for any new features or changes.
 If you have any problem with that contact me. The app is still under developing.
 
 
 ## License
 
-Music Search is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This App is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
